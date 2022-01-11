@@ -37,6 +37,24 @@ CREATE TABLE Family
   picture_path VARCHAR(100)
 );
 ```
+
+In case you do not want to permit null values you can do the following:
+
+**CREATE TABLE tablename
+  (
+    column_name data_type NOT NULL,
+    column_name data_type NOT NULL
+  );**
+```
+CREATE TABLE Family
+(
+  name VARCHAR(100) NOT NULL,
+  relation VARCHAR(100) NOT NULL,
+  age INT NOT NULL,
+  picture_path VARCHAR(100)
+);
+```
+
 4) Dropping or deleting a table;#DROP DATABASE mind_palace;
 
 **DROP TABLE tablename**
