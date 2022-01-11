@@ -72,7 +72,45 @@ CREATE TABLE Family
 );
 ```
 
-4) Dropping or deleting a table;#DROP DATABASE mind_palace;
+Inoder to create a table with **primary key constraints**, you can do the following:
+
+**CREATE TABLE tablename
+  (
+    column_name1 data_type1 NOT NULL,
+    column_name2 data_type2,
+    PRIMARY KEY (column_name1)
+  );**
+  
+```
+CREATE TABLE Family
+(
+  person_id INT NOT NULL,
+  name VARCHAR(100) NOT NULL DEFAULT 'NA',
+  relation VARCHAR(100) NOT NULL DEFAULT 'NA',
+  age INT NOT NULL DEFAULT 0,
+  picture_path VARCHAR(100) DEFAULT 'NA',
+  PRIMARY KEY (person_id)
+);
+```
+
+Adding **auto increment** to primary key
+
+```
+CREATE TABLE Family
+(
+  person_id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL DEFAULT 'NA',
+  relation VARCHAR(100) NOT NULL DEFAULT 'NA',
+  age INT NOT NULL DEFAULT 0,
+  picture_path VARCHAR(100) DEFAULT 'NA',
+  PRIMARY KEY (person_id)
+);
+```
+
+please note: A primary key is a column or a set of columns in a table whose values uniquely identify a row in the table. A relational database is designed to enforce the uniqueness of primary keys by allowing only one row with a given primary key value in a table.
+
+
+4) Dropping or deleting a table
 
 **DROP TABLE tablename**
 
