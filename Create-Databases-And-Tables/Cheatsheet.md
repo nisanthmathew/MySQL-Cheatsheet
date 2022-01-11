@@ -37,3 +37,8 @@ CREATE TABLE Family
   picture_path VARCHAR(100)
 );
 ```
+4) Dropping or deleting a table;#DROP DATABASE mind_palace;
+
+**DROP TABLE tablename**
+
+```DROP TABLE Family```
