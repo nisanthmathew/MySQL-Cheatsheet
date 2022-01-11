@@ -20,8 +20,16 @@ This Cheatsheet provides info about CRUD - Create Read Update and Delete
 
 **READ (retrieve and search data)**
   
-   **SELECT expression FROM table_name;**
+1) **SELECT expression FROM table_name;**
 
-1) Read all columns from table. ```SELECT * FROM Family;```
-2) Read a particular column from the table. ```SELECT name FROM Family;```
-3) Read mulitple columns from the table (will be read out in the mentioned order). ```SELECT name, age, relation FROM Family;```
+      a) Read all columns from table. ```SELECT * FROM Family;```
+
+      b) Read a particular column from the table. ```SELECT name FROM Family;```
+
+      c) Read mulitple columns from the table (will be read out in the mentioned order). ```SELECT name, age, relation FROM Family;```
+   
+2) The **WHERE** clause is used to filter records. It is used to extract only those records that fulfill a specified condition.
+   
+   **SELECT expression FROM table_name WHERE conditional_expression;**
+   
+   ```SELECT name FROM Family WHERE age < 30;```
