@@ -1,3 +1,18 @@
+**MySQL command line commands**
+
+Start by running the mysql service and opening the mysql shell, this can be done simultaneously with a single command:
+**mysql-ctl cli**
+
+Show all databases: **SHOW DATABASES**
+
+Use a particular database: **USE *database name***
+
+Show tables in currently active database: **SHOW TABLES**
+
+Show a particular column in a table: **SHOW COLUMNS FROM *table name***
+
+**SQL code**
+
 1) Creating a database: **CREATE DATABASE database_name;** 
 
 ```CREATE DATABASE mind_palace;```
@@ -22,14 +37,3 @@ CREATE TABLE Family
   picture_path VARCHAR(100)
 );
 ```
-
-**MySQL command line commands**
-
-Show all databases: **SHOW DATABASES**
-
-Use a particular database: **USE *database name***
-
-Show tables in currently active database: **SHOW TABLES**
-
-Show a particular column in a table: **SHOW COLUMNS FROM *table name***
-
