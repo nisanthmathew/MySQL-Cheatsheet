@@ -38,7 +38,7 @@ CREATE TABLE Family
 );
 ```
 
-In case you do not want to permit null values you can do the following:
+In case you **do not want to permit null values**, you can do the following:
 
 **CREATE TABLE tablename
   (
@@ -52,6 +52,23 @@ CREATE TABLE Family
   relation VARCHAR(100) NOT NULL,
   age INT NOT NULL,
   picture_path VARCHAR(100)
+);
+```
+
+In case you wish to set **default values**, you can do the following:
+
+**CREATE TABLE tablename
+  (
+    column_name data_type NOT NULL DEFAULT default_value,
+    column_name data_type DEFAULT default_value
+  );**
+```
+CREATE TABLE Family
+(
+  name VARCHAR(100) NOT NULL DEFAULT 'NA',
+  relation VARCHAR(100) NOT NULL DEFAULT 'NA',
+  age INT NOT NULL DEFAULT 0,
+  picture_path VARCHAR(100) DEFAULT 'NA'
 );
 ```
 
