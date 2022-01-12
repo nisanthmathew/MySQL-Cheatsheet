@@ -41,3 +41,11 @@ This Cheatsheet provides info about CRUD - Create Read Update and Delete
  
    SELECT name AS 'Person Name', age, relation FROM Family;
    ```
+   
+**UPDATE (alter existing data)**
+
+   **UPDATE table_name SET thing_or_things_to_be_changed WHERE condition;**
+   
+   ```
+   UPDATE Family SET age=55, name='Daddy' WHERE relation='Father' ;
+   ```
