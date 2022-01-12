@@ -47,5 +47,15 @@ This Cheatsheet provides info about CRUD - Create Read Update and Delete
    **UPDATE table_name SET thing_or_things_to_be_changed WHERE condition;**
    
    ```
-   UPDATE Family SET age=55, name='Daddy' WHERE relation='Father' ;
+   UPDATE Family SET age=55, name='Daddy' WHERE relation='Father';
    ```
+ 
+ **DELETE (delete existing data)**
+
+   **DELETE FROM table_name WHERE condition;**
+   
+   ```
+   DELETE FROM Family WHERE relation='Enemy1';
+   ```
+   
+   Please note that deleting without a condition will delete all the contents of the table leaving on the shell behind. for e.g. ```DELETE FROM Family```
