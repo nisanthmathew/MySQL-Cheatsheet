@@ -33,3 +33,11 @@ This Cheatsheet provides info about CRUD - Create Read Update and Delete
    **SELECT expression FROM table_name WHERE conditional_expression;**
    
    ```SELECT name FROM Family WHERE age < 30;```
+
+3) **ALIASES** modifies the displayed column names
+   
+   ```
+   SELECT name AS Person, age, relation FROM Family;
+ 
+   SELECT name AS 'Person Name', age, relation FROM Family;
+   ```
