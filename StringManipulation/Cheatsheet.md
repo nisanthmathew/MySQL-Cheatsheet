@@ -9,3 +9,10 @@ This Cheatsheet provides info about functions for string manipulation.
    SELECT CONCAT (name, 'is your', relation) FROM Family;
    SELECT CONCAT (name, 'is your', relation) AS 'Relationships' FROM Family;
   ```
+**CONCAT_WS: adds two or more expressions together when we need them to be seperated using a separator.**
+
+  **CONCAT_WS(separator, expression1, expression2, expression3,...)**
+  
+   ```
+   SELECT CONCAT_WS(' | ', name, age, relation) FROM Family;
+  ```
