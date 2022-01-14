@@ -13,6 +13,27 @@ This Cheatsheet provides info about functions for string manipulation.
 
   **CONCAT_WS(separator, expression1, expression2, expression3,...)**
   
-   ```
+  ```
    SELECT CONCAT_WS(' | ', name, age, relation) FROM Family;
+  ```
+  
+**SUBSTRING: extracts a substring from a string (starting at any position).**
+    **SUBSTRING(string, start, length)**
+    
+   ```
+   SELECT SUBSTRING ('Hello World', 2, 4);
+  ```
+  Output: ello
+  
+  ```
+   SELECT SUBSTRING ('Hello World', 2);
+  ```
+  Output: ello World
+  
+  Using SUBSTRING on columns
+  ```
+   SELECT SUBSTRING (name, 1, 10) FROM Family;
+   SELECT SUBSTRING (name, 1, 10) AS 'Short Name' FROM Family; -- Displayed column title will be 'Short Name'
+   SELECT CONCAT (SUBSTRING (name, 1, 10), ...) FROM Family; -- CONCAT together with SUBSTRING
+   SELECT CONCAT (SUBSTRING (name, 1, 10), ...) AS 'Short Name' FROM Family;
   ```
