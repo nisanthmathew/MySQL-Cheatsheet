@@ -71,3 +71,26 @@ This Cheatsheet provides info about functions for string manipulation.
    SELECT SUBSTRING (REPLACE (name, e, 3), 1, 10) AS ' Wierd Short Name' FROM Family;
   ```
 
+**The CHAR_LENGTH() function return the length of a string (in characters).**
+
+  **CHAR_LENGTH(string);**
+  
+```
+  SELECT CHAR_LENGTH('Hello World');
+  SELECT ame, CHAR_LENGTH(name) AS 'length' FROM FAMILY;
+```
+
+**The UPPER and LOWER() function changes the case of the string.**
+
+  **UPPER(string);**
+  **LOWER(string);**
+
+```
+ SELECT UPPER('Hello World'); -- outputs HELLO WORLD
+
+ SELECT LOWER('Hello World'); -- outputs hello world
+
+ SELECT UPPER(name) FROM Family;
+
+ SELECT CONCAT('THE RELATIONSHIP IS ', UPPER(relatioship)) FROM Family;
+```
