@@ -20,7 +20,7 @@ This Cheatsheet provides info about functions for string manipulation.
 **SUBSTRING: extracts a substring from a string (starting at any position).**
     **SUBSTRING(string, start, length)**
     
-   ```
+  ```
    SELECT SUBSTRING ('Hello World', 2, 4);
   ```
   Output: ello
@@ -37,3 +37,37 @@ This Cheatsheet provides info about functions for string manipulation.
    SELECT CONCAT (SUBSTRING (name, 1, 10), ...) FROM Family; -- CONCAT together with SUBSTRING
    SELECT CONCAT (SUBSTRING (name, 1, 10), ...) AS 'Short Name' FROM Family;
   ```
+
+
+**REPLACE: function replaces all occurrences of a substring within a string, with a new substring.**
+  Note: This function performs a case-sensitive replacement.
+
+  **REPLACE(string, from_string, new_string)**
+  
+  ```
+   SELECT REPLACE('Hello World', 'Hell', '%$#@');
+  ```
+  Output: %$#@o World
+
+  ```
+   SELECT REPLACE('Hello World', 'l', '7');
+  ```
+  Output: He77o Wor7d
+
+  ```
+   SELECT REPLACE('Hello World', 'o', '0');
+  ```
+  Output: Hell0 W0rld
+
+  ```
+   SELECT REPLACE('HellO World', 'o', '*');
+  ```
+  Output: HellO W*rld
+
+ ```
+   SELECT REPLACE (name, e, 3) FROM Family;
+   SELECT REPLACE (name, e, 3) AS 'Weird Name' FROM Family; -- Displayed column title will be 'Weird Name'
+   SELECT SUBSTRING (REPLACE (name, e, 3), 1, 10) FROM Family; -- Replace and then only display first 10 characters
+   SELECT SUBSTRING (REPLACE (name, e, 3), 1, 10) AS ' Wierd Short Name' FROM Family;
+  ```
+
