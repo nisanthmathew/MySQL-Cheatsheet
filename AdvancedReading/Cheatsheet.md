@@ -20,4 +20,12 @@
    SELECT first_name, last_name FROM Family ORDER BY last_name, first_name; --this will sort first using last name and then using first name in case last names match.
    ```
 
+**LIMIT statement limits the output by the specified number**
 
+   SELECT column1, column2.. FROM table_name LIMIT limit_number;
+   
+   ```
+   SELECT name FROM Family LIMIT 2; -- displays only two entries
+   SELECT name FROM Family ORDER BY age LIMIT 2; -- displays only two youngest entries
+   SELECT name FROM Family ORDER BY age LIMIT 1,3; -- displays only two young entries except the youngest entry
+   ```
