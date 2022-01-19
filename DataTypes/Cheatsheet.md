@@ -27,3 +27,4 @@ INSERT INTO items(price) VALUES(298.9999); --will be stored as 299.00 (rounded u
 They also stores numbers with decimal part like **DECIMAL** type. These take less space to store large numbers comapared to **DECIMAL**, but at the cost of precision.
 Please always use DECIMAL where ever precision matters.
 
+![Alt text](https://github.com/nisanthmathew/MySQLCheatsheet/blob/c3618d3e8a76445dbe203eef19ec92319bb175d8/DataTypes/FLOATANDDOUBLE.PNG?raw=true "FLOAT and DOUBLE")
