@@ -25,6 +25,17 @@ INSERT INTO items(price) VALUES(298.9999); --will be stored as 299.00 (rounded u
 **FLOAT and DOUBLE**
 
 They also stores numbers with decimal part like **DECIMAL** type. These take less space to store large numbers comapared to **DECIMAL**, but at the cost of precision.
-Please always use DECIMAL where ever precision matters.
+Please always use DECIMAL where ever precision matters. or use **DOUBLE** instead of float.
 
 ![Alt text](https://github.com/nisanthmathew/MySQLCheatsheet/blob/c3618d3e8a76445dbe203eef19ec92319bb175d8/DataTypes/FLOATANDDOUBLE.PNG?raw=true "FLOAT and DOUBLE")
+
+```
+CREATE TABLE things (name VARCHAR(20), PRICE FLOAT);
+
+INSERT INTO things (name, price) VALUES ('one', 88.45); --will be stored as 88.45
+
+INSERT INTO things (name, price) VALUES ('two', 88333.45); --will be stored as 88333.45
+
+INSERT INTO things (name, price) VALUES ('two', 8833334.45);  --will be stored as 8833330 (loss in precision after 7 digits)
+
+```
