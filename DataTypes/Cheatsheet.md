@@ -39,3 +39,16 @@ INSERT INTO things (name, price) VALUES ('two', 88333.45); --will be stored as 8
 INSERT INTO things (name, price) VALUES ('two', 8833334.45);  --will be stored as 8833330 (loss in precision after 7 digits)
 
 ```
+
+**DATE, TIME and DATETIME**
+
+```
+CREATE TABLE people (name VARCHAR(100), birthdate DATE, birthtime TIME, birthdatetime DATETIME);
+ 
+INSERT INTO people (name, birthdate, birthtime, birthdatetime)
+VALUES('Padma', '1983-11-11', '10:07:35', '1983-11-11 10:07:35');
+ 
+INSERT INTO people (name, birthdate, birthtime, birthdatetime)
+VALUES('Larry', '1943-12-25', '04:10:42', '1943-12-25 04:10:42');
+``
+
