@@ -6,8 +6,8 @@ This Cheatsheet provides info about functions for string manipulation.
   Note: If any of the expressions is a NULL value, it returns NULL. Also note that the data in the database remains unmodified.
   
    ```
-   SELECT CONCAT (name, 'is your', relation) FROM Family;
-   SELECT CONCAT (name, 'is your', relation) AS 'Relationships' FROM Family;
+   SELECT CONCAT(name, 'is your', relation) FROM Family;
+   SELECT CONCAT(name, 'is your', relation) AS 'Relationships' FROM Family;
   ```
 **CONCAT_WS: adds two or more expressions together when we need them to be seperated using a separator.**
 
@@ -21,21 +21,21 @@ This Cheatsheet provides info about functions for string manipulation.
     **SUBSTRING(string, start, length)**
     
   ```
-   SELECT SUBSTRING ('Hello World', 2, 4);
+   SELECT SUBSTRING('Hello World', 2, 4);
   ```
   Output: ello
   
   ```
-   SELECT SUBSTRING ('Hello World', 2);
+   SELECT SUBSTRING('Hello World', 2);
   ```
   Output: ello World
   
   Using SUBSTRING on columns
   ```
-   SELECT SUBSTRING (name, 1, 10) FROM Family;
-   SELECT SUBSTRING (name, 1, 10) AS 'Short Name' FROM Family; -- Displayed column title will be 'Short Name'
-   SELECT CONCAT (SUBSTRING (name, 1, 10), ...) FROM Family; -- CONCAT together with SUBSTRING
-   SELECT CONCAT (SUBSTRING (name, 1, 10), ...) AS 'Short Name' FROM Family;
+   SELECT SUBSTRING(name, 1, 10) FROM Family;
+   SELECT SUBSTRING(name, 1, 10) AS 'Short Name' FROM Family; -- Displayed column title will be 'Short Name'
+   SELECT CONCAT (SUBSTRING(name, 1, 10), ...) FROM Family; -- CONCAT together with SUBSTRING
+   SELECT CONCAT (SUBSTRING(name, 1, 10), ...) AS 'Short Name' FROM Family;
   ```
 
 
