@@ -1,0 +1,17 @@
+Below are some examples of date arithmetic.
+
+SELECT DATEDIFF(NOW(), birthdate) FROM Family; --output days between current date and all birth dates in the Family table
+ 
+SELECT name, birthdate, DATEDIFF(NOW(), birthdate) FROM Family; --output name, birthdate and days between current date and all birth dates in the Family table
+ 
+SELECT birthdate, DATE_ADD(birthdate, INTERVAL 1 MONTH) FROM Family; --adds and displays 1 month to the birthdate
+ 
+SELECT birthdate, DATE_ADD(birthdate, INTERVAL 10 SECOND) FROM people;
+ 
+SELECT birthdate, DATE_ADD(birthdate, INTERVAL 3 QUARTER) FROM people;
+ 
+SELECT birthdate, birthdate + INTERVAL 1 MONTH FROM people; 
+ 
+SELECT birthdate, birthdate - INTERVAL 5 MONTH FROM people; --substract and display 5 month to the birthdate
+ 
+SELECT birthdate, birthdate + INTERVAL 15 MONTH + INTERVAL 10 HOUR FROM people;
